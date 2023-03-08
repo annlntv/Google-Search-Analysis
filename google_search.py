@@ -9,7 +9,7 @@ data = data.sort_values(by="гуль", ascending=False)
 data = data.head(10)
 print(data)
 
-data.reset_index().plot(x="Название страны",
+data.reset_index().plot(x="geoName",
                         y="гуль",
                         figsize=(15,12), kind="bar")
 plt.style.use('fivethirtyeight')
@@ -21,9 +21,9 @@ data = data.interest_over_time()
 fig, ax = plt.subplots(figsize=(15, 12))
 data['гуль'].plot()
 plt.style.use('fivethirtyeight')
-plt.title('Количество гугл-запросов для "гуль"',
+plt.title('Total Google Searches for "гуль"',
           fontweight='bold')
-plt.xlabel('Год')
-plt.ylabel('Итоговое кол-во')
+plt.xlabel('Year')
+plt.ylabel('Total Count')
 plt.show()
 
